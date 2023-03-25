@@ -14,8 +14,8 @@ public class SetUp {
 		SupportEcriture supportEcriture;
 		int choixSupport;
 		do {
-			System.out.println("Souhaitez-vous afficher votre texte � l��cran ou l'�crire dans un fichier ?");
-			System.out.println("1 - Affichage �cran");
+			System.out.println("Souhaitez-vous afficher votre texte de l'écran ou l'écrire dans un fichier ?");
+			System.out.println("1 - Affichage écran");
 			System.out.println("2 - Ecriture fichier");
 			choixSupport = Clavier.entrerClavierInt();
 		} while (choixSupport < 1 || choixSupport > 2);
