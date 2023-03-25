@@ -40,7 +40,7 @@ public class Dragon extends EtreVivant{
         String text = "";
         this.life = this.life - degat; // Diminue les points de vie du dragon en fonction des dégâts infligés
         if (this.life > 0) {
-            text = this.name + " subit une violente attaque, mais il parvient à se relever!"; // Si le dragon a encore des points de vie, affiche un message pour indiquer qu'il est encore en vie
+            text = this.name + " subit une violente attaque, mais il parvient à se relever! \n"; // Si le dragon a encore des points de vie, affiche un message pour indiquer qu'il est encore en vie
         } else {
             text = this.name + " subit une violente attaque, trop violente pour survivre! \n" + mourir(); // Si le dragon n'a plus de points de vie, affiche un message pour indiquer qu'il est mort et appelle la méthode mourir()
         }

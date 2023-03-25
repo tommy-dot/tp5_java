@@ -12,7 +12,7 @@ public class BoundaryCreerArme {
 	public void creerArme() {
 		int numTypeArme;
 		do {
-			System.out.println("Quel type d'arme souhaitez-vous cr�er ?");
+			System.out.println("Quel type d'arme souhaitez-vous créer ?");
 			System.out.println("1 - une épée,");
 			System.out.println("2 - un arc,");
 			System.out.println("3 - un lance-pierre.");
@@ -24,7 +24,7 @@ public class BoundaryCreerArme {
 				controleur.creerArme(nom);
 				break;
 			case 2:
-				System.out.println("Donnez le nombre de fl�ches : ");
+				System.out.println("Donnez le nombre de flèches : ");
 				int nombreFleches = Clavier.entrerClavierInt();
 				controleur.creerArme(nombreFleches);
 				break;
