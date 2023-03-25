@@ -30,7 +30,7 @@ public class TestEntites {
 		System.out.println(stockEtreVivant.afficherEtreVivant());
 		System.out.print("Je selectionne le num�ro 3 : ");
 		EtreVivant etreVivantSelectionner = stockEtreVivant.selectionner(3);
-		System.out.println(etreVivantSelectionner.getName());
+		System.out.println(etreVivantSelectionner.getnom());
 		System.out.println("Je supprime le num�ro 3");
 		etreVivantSelectionner = stockEtreVivant.selectionner(3);
 		stockEtreVivant.supprimerEtreVivant(etreVivantSelectionner);
@@ -58,11 +58,11 @@ public class TestEntites {
 		System.out.print("Je selectionne le 1er et le 3eme homme : ");
 		EtreVivant homme1 = bataille.selectionner(TypeEtreVivant.HOMME, 1);
 		EtreVivant homme3 = bataille.selectionner(TypeEtreVivant.HOMME, 3);
-		System.out.println(homme1.getName() + " et " + homme3.getName());
+		System.out.println(homme1.getnom() + " et " + homme3.getnom());
 
 		System.out.print("Je selectionne le dragon : ");
 		EtreVivant dragon = bataille.selectionner(TypeEtreVivant.DRAGON, 1);
-		System.out.println(dragon.getName());
+		System.out.println(dragon.getnom());
 
 		System.out.println("Je supprime le 3eme homme et le dragon");
 		bataille.eliminer((Homme) homme3);

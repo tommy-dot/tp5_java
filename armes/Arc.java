@@ -16,12 +16,12 @@ public class Arc extends Arme{
 
     public String attaque(Dragon dragon){
         if (nbrFleches > 0) {
-            String text1 = proprietaire.getName() + " attaque " + dragon.getName() + " avec son " + this.nature + "\n";
+            String text1 = proprietaire.getnom() + " attaque " + dragon.getnom() + " avec son " + this.nature + "\n";
             String text = text1 + dragon.subirAttaque(degat);
             nbrFleches--;
             return text;
         } else {
-            String text1 = proprietaire.getName() + " attaque " + dragon.getName() + " avec son " + this.nature + "\n";
+            String text1 = proprietaire.getnom() + " attaque " + dragon.getnom() + " avec son " + this.nature + "\n";
             String text = text1 + "Malheuresement il n'a plus de flèches!";
             return text;
         }

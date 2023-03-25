@@ -16,6 +16,6 @@ public class Heros extends Homme{
 
     public String prendreEpee(Epee epee){
         epee.setProprietaire(this);
-        return parler("Je prends " + epee.getNom());
+        return parler("Je prends " + epee.getnom());
     }
 }

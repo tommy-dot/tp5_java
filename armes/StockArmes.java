@@ -24,7 +24,7 @@ public class StockArmes {
 		String chaine = "";
 		int i = 1;
 		for (Epee epee : epees) {
-			chaine += "- " + i + " - l'�p�e " + epee.getNom() + "\n";
+			chaine += "- " + i + " - l'�p�e " + epee.getnom() + "\n";
 			i++;
 		}
 		for (Arc arc : arcs) {

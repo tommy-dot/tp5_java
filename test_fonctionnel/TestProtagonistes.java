@@ -10,9 +10,9 @@ public class TestProtagonistes {
 		Heros heros = new Heros("Arthur");
 		Dragon dragon = new Dragon("Dragonnet");
 
-		System.out.println(homme.parler("Je suis " + homme.getName() + ", un homme."));
-		System.out.println(heros.parler("Je suis " + heros.getName() + ", un heros."));
-		System.out.println("Le dragon " + dragon.getName() + ".");
+		System.out.println(homme.parler("Je suis " + homme.getnom() + ", un homme."));
+		System.out.println(heros.parler("Je suis " + heros.getnom() + ", un heros."));
+		System.out.println("Le dragon " + dragon.getnom() + ".");
 	}
 
 	// RESULAT :

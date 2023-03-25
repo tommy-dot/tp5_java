@@ -32,7 +32,7 @@ public class Camps {
 		String chaine = "";
 		int i = 1;
 		for (EtreVivant etreVivant : compagnons) {
-			chaine += "- " + i + " - " + etreVivant.getName() + "\n";
+			chaine += "- " + i + " - " + etreVivant.getnom() + "\n";
 			i++;
 		}
 		return chaine;

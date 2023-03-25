@@ -20,20 +20,20 @@ public class TestArme {
 		LancePierre lancePierre = new LancePierre();
 		Epee epee = new Epee("Excalibur");
 		Arc arc = new Arc(1);
-		System.out.println("Le lance-pierre a un propri�taire ? " + lancePierre.estPris());
-		System.out.println("Thomas prend le " + lancePierre.getNature() + ".");
+		System.out.println("Le lance-pierre a un propri�taire ? " + lancePierre.estpris());
+		System.out.println("Thomas prend le " + lancePierre.getnature() + ".");
 		lancePierre.setProprietaire(homme);
-		System.out.println("Le lance-pierre � un propri�taire ? " + lancePierre.estPris());
+		System.out.println("Le lance-pierre � un propri�taire ? " + lancePierre.estpris());
 		lancePierre.attaque(dragon);
 		System.out.println("Thomas lache le lance-pierre.");
 		lancePierre.lacher();
-		System.out.println("Le lance-pierre � un propri�taire ? " + lancePierre.estPris());
+		System.out.println("Le lance-pierre � un propri�taire ? " + lancePierre.estpris());
 		arc.setProprietaire(homme);
-		System.out.println("Thomas prend son " + arc.getNature() + ".");
+		System.out.println("Thomas prend son " + arc.getnature() + ".");
 		System.out.println(arc.attaque(dragon));
 		System.out.println(arc.attaque(dragon));
 		epee.setProprietaire(heros);
-		System.out.println("Arthur se saisit de son " + epee.getNature() + " " + epee.getNom() + ".");
+		System.out.println("Arthur se saisit de son " + epee.getnature() + " " + epee.getnom() + ".");
 		System.out.println(epee.attaque(dragon));
 		System.out.println(epee.attaque(dragon));
 

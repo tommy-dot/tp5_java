@@ -14,7 +14,7 @@ public abstract class EtreVivant {
         this.life = life;
     }
 
-    public String getName(){
+    public String getnom(){
         return name;
     }
 

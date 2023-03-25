@@ -17,15 +17,15 @@ public class Arme {
         this.proprietaire = proprietaire;
     }
 
-    public Homme getProprietaire() {
+    public Homme getproprietair() {
         return proprietaire;
     }
 
-    public String getNature() {
+    public String getnature() {
         return nature;
     }
 
-    public Boolean estPris(){
+    public Boolean estpris(){
         if (proprietaire != null) {
             return true;
         } else {
@@ -38,7 +38,7 @@ public class Arme {
     }
 
     public String attaque(Dragon dragon){
-        String text = proprietaire.getName() + " attaque " + dragon.getName() + " avec son " + this.nature + "\n" + dragon.subirAttaque(degat);
+        String text = proprietaire.getnom() + " attaque " + dragon.getnom() + " avec son " + this.nature + "\n" + dragon.subirAttaque(degat);
         return text;
     }
 }

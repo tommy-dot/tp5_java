@@ -24,15 +24,15 @@ public class StockEtreVivant {
 		String chaine = "";
 		int i = 1;
 		for (Heros leHeros : heros) {
-			chaine += "- " + i + " - le h�ros " + leHeros.getName() + "\n";
+			chaine += "- " + i + " - le h�ros " + leHeros.getnom() + "\n";
 			i++;
 		}
 		for (Homme homme : hommes) {
-			chaine += "- " + i + " - l'homme " + homme.getName() + "\n";
+			chaine += "- " + i + " - l'homme " + homme.getnom() + "\n";
 			i++;
 		}
 		for (Dragon dragon : dragons) {
-			chaine += "- " + i + " - le dragon " + dragon.getName() + "\n";
+			chaine += "- " + i + " - le dragon " + dragon.getnom() + "\n";
 			i++;
 		}
 		return chaine;

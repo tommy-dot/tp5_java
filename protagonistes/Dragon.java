@@ -19,6 +19,18 @@ public class Dragon extends EtreVivant{
         return mourirText;
     }
 
+    public String cracheBouleFeu(Homme homme){
+        if (nbrBouleDeFeu > 0) {
+            String text = this.getnom() + " crache une boule de feu sur " + homme.getnom() + "!"+ "\n" + homme.subirAttaque(100);
+            nbrBouleDeFeu--;
+            return text;
+        } else {
+            String text = this.getnom() + " a voulu attaquer " + homme.getnom() + " mais il n’avait plus de feu en lui. " + homme.getnom() + " a eu beaucoup de chance !" ;
+            return text;
+        }
+        
+    }
+
     public String subirAttaque(int degat){
         String text = "";
         this.life = this.life - degat;
@@ -30,15 +42,5 @@ public class Dragon extends EtreVivant{
         return text;
     }
 
-    public String cracheBouleFeu(Homme homme){
-        if (nbrBouleDeFeu > 0) {
-            String text = this.getName() + " crache une boule de feu sur " + homme.getName() + "!"+ "\n" + homme.subirAttaque(100);
-            nbrBouleDeFeu--;
-            return text;
-        } else {
-            String text = this.getName() + " a voulu attaquer " + homme.getName() + " mais il n’avait plus de feu en lui. " + homme.getName() + " a eu beaucoup de chance !" ;
-            return text;
-        }
-        
-    }
+
 }

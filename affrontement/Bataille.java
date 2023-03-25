@@ -13,9 +13,9 @@ public class Bataille {
 		String texte = "";
 		campHomme.ajouterEtreVivant(homme);
 		if (campHomme.nbCompagnon() > 1) {
-			texte = homme.parler("Bonjour, je m'appelle " + homme.getName() + " et je viens me joindre au combat.");
+			texte = homme.parler("Bonjour, je m'appelle " + homme.getnom() + " et je viens me joindre au combat.");
 		} else {
-			texte += (homme.getName()
+			texte += (homme.getnom()
 					+ " est le premier � se joindre � la derni�re bataille entre les Hommes et les dragons.\n");
 		}
 		return texte;
@@ -25,9 +25,9 @@ public class Bataille {
 		String texte = "";
 		campDragon.ajouterEtreVivant(dragon);
 		if (campDragon.nbCompagnon() > 1) {
-			texte = ("Un nouveau dragon " + dragon.getName() + " s'approchait du champ de bataille.\n");
+			texte = ("Un nouveau dragon " + dragon.getnom() + " s'approchait du champ de bataille.\n");
 		} else {
-			texte = "Le dragon " + dragon.getName() + " fut le premier � arriver sur le champ de bataille.\n";
+			texte = "Le dragon " + dragon.getnom() + " fut le premier � arriver sur le champ de bataille.\n";
 		}
 		return texte;
 	}

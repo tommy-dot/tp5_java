@@ -8,7 +8,7 @@ public class Epee extends Arme{
         this.nom = nom;
     }
 
-    public String getNom() {
+    public String getnom() {
         return nom;
     }
 }

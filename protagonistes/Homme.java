@@ -44,7 +44,7 @@ public class Homme extends EtreVivant{
     public String lacher(){
         String text = "";
         if (maPossession != null){
-            text = this.getName() + " a laché son " + maPossession.getNature();
+            text = this.getnom() + " a laché son " + maPossession.getnature();
             maPossession.lacher();
             maPossession = null;
         } else {
@@ -62,10 +62,10 @@ public class Homme extends EtreVivant{
             maPossession.setProprietaire(this);
         }
         
-        if (arme.estPris()) {
-            String text1 = this.parler(arme.getProprietaire().getName() + " peux-tu me laisser ton " + arme.getNature());
-            String text2 = arme.getProprietaire().parler("Pas de souci, cela me permettra de reprendre mon souffle.");
-            text = text1 + "\n" + text2 + "\n" + arme.getProprietaire().lacher() + "\n";
+        if (arme.estpris()) {
+            String text1 = this.parler(arme.getproprietair().getnom() + " peux-tu me laisser ton " + arme.getnature());
+            String text2 = arme.getproprietair().parler("Pas de souci, cela me permettra de reprendre mon souffle.");
+            text = text1 + "\n" + text2 + "\n" + arme.getproprietair().lacher() + "\n";
         }
 
         if (arme instanceof Epee) {
@@ -75,7 +75,7 @@ public class Homme extends EtreVivant{
             return text + prendreEpee((Epee) arme);
         }
 
-        text = this.parler(" Je prends mon " + arme.getNature() + ".");
+        text = this.parler(" Je prends mon " + arme.getnature() + ".");
         maPossession = arme;
         maPossession.setProprietaire(this);
 
@@ -85,7 +85,7 @@ public class Homme extends EtreVivant{
     public String combattre(Dragon dragon){
         String text = "";
         if (maPossession == null) {
-            text = this.getName() + " s'attaque sans aucune arme à " + dragon.getName() + "\n" +this.mourir();
+            text = this.getnom() + " s'attaque sans aucune arme à " + dragon.getnom() + "\n" +this.mourir();
         } else {
             text = maPossession.attaque(dragon);
         }
@@ -97,11 +97,11 @@ public class Homme extends EtreVivant{
         String text = "";
         this.life = this.life - 10;
         if (this.life > 0){
-            text = this.getName() + ": Je prends l’épée même si pour cela je dois perdre des forces.";
+            text = this.getnom() + ": Je prends l’épée même si pour cela je dois perdre des forces.";
             maPossession = epee;
             maPossession.setProprietaire(this);
         } else {
-            text = this.getName() + " a voulu prendre l’épée mais son état de fatigue ne lui permettait pas cet ultime effort, il en est mort! \n" + this.mourir();
+            text = this.getnom() + " a voulu prendre l’épée mais son état de fatigue ne lui permettait pas cet ultime effort, il en est mort! \n" + this.mourir();
         }
 
         return text;
