@@ -33,10 +33,9 @@ public class TestBoundaryEcrivain {
 				controleurCreerProtagoniste);
 
 		BoundaryCreerArme boundaryCreerArme = new BoundaryCreerArme(controleurCreerArme);
-		BoundaryFaireCombattre boundaryFaireCombattre = new BoundaryFaireCombattre(controleurFaireCombattre);
-		BoundaryFairePrendreArme boundaryFairePrendreArme = new BoundaryFairePrendreArme(controleurFairePrendreArme);
-		BoundaryFaireRejoindreBataille boundaryFaireRejoindreBataille = new BoundaryFaireRejoindreBataille(
-				controleurFaireRejoindreBataille);
+		BoundaryFaireCombattre boundaryFaireCombattre = new BoundaryFaireCombattre(controleurFaireCombattre, null);
+		BoundaryFairePrendreArme boundaryFairePrendreArme = new BoundaryFairePrendreArme(controleurFairePrendreArme, null);
+		BoundaryFaireRejoindreBataille boundaryFaireRejoindreBataille = new BoundaryFaireRejoindreBataille(controleurFaireRejoindreBataille, null);
 
 		BoundaryEcrivain boundaryEcrivain = new BoundaryEcrivain(boundaryCreerProtagoniste, boundaryCreerArme,
 				boundaryFaireCombattre, boundaryFairePrendreArme, boundaryFaireRejoindreBataille);
